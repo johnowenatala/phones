@@ -1,0 +1,22 @@
+{
+  "name": "phones",
+  "description": "See README.md",
+  "main": "",
+  "authors": [
+    "John Owen"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "=1.12.1",
+    "chosen": "^1.6.2"
+  }
+}

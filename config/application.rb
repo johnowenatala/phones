@@ -22,5 +22,20 @@ module Phones
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+
+    config.browserify_rails.source_map_environments << "development"
+
+    # unless Rails.env.production?
+    #   # Work around sprockets+teaspoon mismatch:
+    #   Rails.application.config.assets.precompile += %w(spec_helper.js)
+    #
+    #   # Make sure Browserify is triggered when
+    #   # asked to serve javascript spec files
+    #   config.browserify_rails.paths << lambda { |p|
+    #     p.start_with?(Rails.root.join("spec/javascripts").to_s)
+    #   }
+    # end
+
   end
 end

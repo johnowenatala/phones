@@ -47,3 +47,17 @@ group :development do
   gem 'spring'
 end
 
+gem 'bower-rails'
+
+
+gem "browserify-rails"
+
+group :development, :test do
+  # Your choice of test library.
+  # Also available, teaspoon-mocha / teaspoon-qunit
+  gem "teaspoon-jasmine"
+
+  # Teaspoon's front-end is written in CoffeeScript but it's not a dependency
+  gem "coffee-script"
+end
+

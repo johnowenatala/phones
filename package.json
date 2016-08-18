@@ -1,0 +1,12 @@
+{
+  "name": "phones",
+  "version": "1.0.0",
+  "description": "See README.md",
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "browserify-incremental": "^3.1.1",
+    "del": "^2.2.2"
+  },
+  "author": "John Owen",
+  "license": "MIT"
+}
