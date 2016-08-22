@@ -63,3 +63,5 @@ end
 
 
 gem 'react-rails', '=1.8.2'
+
+gem 'font-awesome-sass', '~> 4.6.2'

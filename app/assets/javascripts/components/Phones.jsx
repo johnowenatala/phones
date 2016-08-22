@@ -1,6 +1,12 @@
 
 var Phones = React.createClass({
 
+  propTypes: {
+    pollInterval: React.PropTypes.number,
+    polling: React.PropTypes.bool,
+    title: React.PropTypes.string
+  },
+
   loadPhones: function() {
     $.ajax({
       url: this.props.sourceUrl,
@@ -9,7 +15,7 @@ var Phones = React.createClass({
       success: function(data) {
         console.log("some data received", data);
         // console.log("data received: ", data)
-        this.setState({phones: data['phones']});
+        this.setPhones(data['phones']);
       }.bind(this),
       error: function(xhr, status, err) {
         console.log('Algo anda mal', 'background: #ffcc99;');
@@ -17,7 +23,25 @@ var Phones = React.createClass({
     });
   },
 
+  setPhones: function(phones) {
+    phones = this.mapPhones(phones);
+    this.setState({phones: phones});
+  },
 
+  mapPhones: function(data) {
+    return data.map(function(phone,i){
+      phone.key = phone.uid + "" + new Date().getTime();
+      return phone;
+    });
+  },
+
+  getDefaultProps: function() {
+    return {
+      pollInterval: 2000,
+      title: 'Phones',
+      polling: true
+    };
+  },
 
   getInitialState: function() {
     return {phones: []};
@@ -26,12 +50,19 @@ var Phones = React.createClass({
   componentDidMount: function(){
     console.log('component did mount');
     this.loadPhones();
-    setInterval(this.loadPhones, this.props.pollInterval);
+    if (this.props.polling) {
+      setInterval(this.loadPhones, this.props.pollInterval);
+    }
   },
 
   render: function() {
     return (
-        <PhoneList phones={this.state.phones}></PhoneList>
+        <div className="phones">
+          <h1>{this.props.title}</h1>
+          <Search />
+          <SorterList />
+          <PhoneList phones={this.state.phones}></PhoneList>
+        </div>
     );
   }
 });

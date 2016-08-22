@@ -1,8 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Phones</h1>
-
-<%= react_component('Phones', sourceUrl: phones_url(format: :json), pollInterval: 5000) %>
+<% if notice.present? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+<%= react_component('Phones', sourceUrl: phones_url(format: :json), pollInterval: 5000, polling: false) %>
 
 
 <span class="link">New phone (soon)</span>

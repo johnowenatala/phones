@@ -25,6 +25,9 @@ module Phones
 
 
     config.react.addons = true
+
+    # config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 ] --extensions .es6 ]"
+
     config.browserify_rails.source_map_environments << "development"
 
     # unless Rails.env.production?

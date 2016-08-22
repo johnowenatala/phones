@@ -9,13 +9,27 @@ var Phone = React.createClass({
     comments: React.PropTypes.string
   },
 
+  getDefaultProps: function() {
+    return {
+      photo: null,
+      compatibility: null,
+      comments: null
+    };
+  },
 
   render: function(){
 
     var phone = this.props;
-
     return (
-      <article>{phone.brand} {phone.model}</article>
+      <article className="phone">
+        <header>
+          <h1>{phone.brand}</h1>
+          <h2>{phone.model} <span className="preview">[Img]</span></h2>
+
+          <span className="stars">[Stars]</span>
+        </header>
+        <InplaceTextArea className="comments">{phone.comments}</InplaceTextArea>
+      </article>
     );
   }
 });

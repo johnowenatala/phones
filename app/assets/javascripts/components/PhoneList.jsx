@@ -7,11 +7,10 @@ var PhoneList = React.createClass({
   },
 
   phones: function() {
-    return this.props.phones.map(function(phone, i){
-      key = phone.uid + "" + new Date().getTime(); //phone.brand + "-"+ phone.model
+    return this.props.phones.map(function(phone){
       return (
           <Phone
-              key={key}
+              key={phone.key}
               {...phone}
           >{phone.comments}</Phone>
       );
