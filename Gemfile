@@ -61,3 +61,5 @@ group :development, :test do
   gem "coffee-script"
 end
 
+
+gem 'react-rails', '=1.8.2'

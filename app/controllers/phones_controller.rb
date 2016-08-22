@@ -4,7 +4,7 @@ class PhonesController < ApplicationController
   # GET /phones
   # GET /phones.json
   def index
-    @phones = Phone.all
+    @phones = Phone.all #.order("RAND() ASC").take(rand(1..6))
   end
 
   # GET /phones/1

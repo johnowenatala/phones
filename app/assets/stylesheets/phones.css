@@ -1,0 +1,17 @@
+.phone-tx-enter {
+  opacity: 0.01;
+}
+
+.phone-tx-enter.phone-tx-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.phone-tx-leave {
+  opacity: 1;
+}
+
+.phone-tx-leave.phone-tx-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

@@ -24,6 +24,7 @@ module Phones
     config.active_record.raise_in_transactional_callbacks = true
 
 
+    config.react.addons = true
     config.browserify_rails.source_map_environments << "development"
 
     # unless Rails.env.production?

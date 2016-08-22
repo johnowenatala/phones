@@ -5,7 +5,9 @@
   "dependencies": {
     "browserify": "^13.1.0",
     "browserify-incremental": "^3.1.1",
-    "del": "^2.2.2"
+    "del": "^2.2.2",
+    "immutable": "^3.8.1",
+    "redux": "^3.5.2"
   },
   "author": "John Owen",
   "license": "MIT"
