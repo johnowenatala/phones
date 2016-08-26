@@ -15,6 +15,13 @@
   border-bottom: 1px solid #444;
 }
 
+.phones a {
+  color: #3875d7;
+}
+.phones a:hover {
+  color: #730E15;
+}
+
 /* search sub-component */
 
 .inline-search-form {
@@ -59,11 +66,8 @@
   padding: 8px 12px;
   text-decoration: none;
   text-align: center;
-  color: #3875d7;
-
 }
 .sorter-list .sorter a:hover {
-  color: #730E15;
 }
 .sorter-list .sorter .field {
   margin-right: 1ex;
@@ -143,4 +147,42 @@
   height: 80px;
   width: 100%;
   overflow-y: auto;
+}
+
+.phone-list .preview .image-modal {
+  display: inline;
+}
+
+.image-modal a {
+  cursor: zoom-in;
+}
+
+
+
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 14px;
+}
+.rating .star {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.rating .star:hover {
+  cursor: pointer;
+}
+.rating .star:before {
+  content: "\f006";
+  padding-right: 5px;
+}
+.rating .star.filled:before {
+  content: "\f005";
+}
+.rating .star:hover:before,
+.rating a:hover ~ a > .star:before {
+  content: "\f005";
+  color: #730E15;
 }

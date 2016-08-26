@@ -1,5 +1,5 @@
 
-var Phones = React.createClass({
+var XPhones = React.createClass({
 
   propTypes: {
     pollInterval: React.PropTypes.number,

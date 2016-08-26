@@ -10,13 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require chosen
-//= require react
-//= require react_ujs
-//= require components
-//= require redux-components
-//= require_tree .
+//= require_tree ./redux-components
 
+
+
+
+//window.Root  = require('./redux-components/Root.es6').default;

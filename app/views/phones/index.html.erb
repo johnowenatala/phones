@@ -1,7 +1,9 @@
 <% if notice.present? %>
   <p id="notice"><%= notice %></p>
 <% end %>
-<%= react_component('Phones', sourceUrl: phones_url(format: :json), pollInterval: 5000, polling: false) %>
 
+<%= react_component('XPhones', sourceUrl: phones_url(format: :json), pollInterval: 5000, polling: false) %>
+
+<%= react_component('Root') %>
 
 <span class="link">New phone (soon)</span>
