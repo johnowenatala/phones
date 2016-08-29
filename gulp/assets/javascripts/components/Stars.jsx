@@ -45,3 +45,5 @@ var Stars = React.createClass({
     );
   }
 });
+
+window.Stars = Stars;

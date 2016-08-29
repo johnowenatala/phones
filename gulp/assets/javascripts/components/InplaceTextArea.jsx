@@ -43,3 +43,5 @@ var InplaceTextArea = React.createClass({
     );
   }
 });
+
+window.InplaceTextArea = InplaceTextArea;

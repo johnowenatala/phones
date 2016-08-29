@@ -43,3 +43,5 @@ var Sorter = React.createClass({
     );
   }
 });
+
+window.Sorter = Sorter;

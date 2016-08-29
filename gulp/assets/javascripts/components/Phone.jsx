@@ -48,3 +48,5 @@ var Phone = React.createClass({
     );
   }
 });
+
+window.Phone = Phone;

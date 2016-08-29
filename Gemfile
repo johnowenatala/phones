@@ -50,7 +50,7 @@ end
 gem 'bower-rails'
 
 
-gem "browserify-rails"
+#gem "browserify-rails"
 
 group :development, :test do
   # Your choice of test library.

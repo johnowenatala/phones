@@ -38,3 +38,5 @@ var SorterList = React.createClass({
     );
   }
 });
+
+window.SorterList = SorterList;

@@ -26,10 +26,10 @@ module Phones
 
     config.react.addons = true
 
-    config.browserify_rails.commandline_options = " -t [ babelify --presets [ react ] --extensions .jsx ] -t [ babelify --presets [ es2015 ] --extensions .es6 ] --fast"
+    #config.browserify_rails.commandline_options = " -t [ babelify --presets [ react ] --extensions .jsx ] -t [ babelify --presets [ es2015 ] --extensions .es6 ] --fast"
     #config.browserify_rails.commandline_options = "--fast"
 
-    config.browserify_rails.source_map_environments << "development"
+    #config.browserify_rails.source_map_environments << "development"
 
     #config.browserify_rails.use_browserifyinc = false
 
@@ -43,6 +43,10 @@ module Phones
     #     p.start_with?(Rails.root.join("spec/javascripts").to_s)
     #   }
     # end
+    
+    # Make public assets requireable in manifest files
+    config.assets.paths << Rails.root.join("public", "assets", "stylesheets")
+    config.assets.paths << Rails.root.join("public", "assets", "javascripts")
 
   end
 end

@@ -2,6 +2,8 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
+<img src="<%= gulp_asset_path('images/gulp.png') %>" alt="">
+
 <%= react_component('XPhones', sourceUrl: phones_url(format: :json), pollInterval: 5000, polling: false) %>
 
 <%= react_component('Root') %>

@@ -26,3 +26,5 @@ var PhoneList = React.createClass({
     );
   }
 });
+
+window.PhoneList = PhoneList;

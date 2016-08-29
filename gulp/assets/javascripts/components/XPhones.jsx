@@ -66,3 +66,5 @@ var XPhones = React.createClass({
     );
   }
 });
+
+window.XPhones = XPhones;

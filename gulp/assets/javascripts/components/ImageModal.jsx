@@ -19,3 +19,5 @@ var ImageModal = React.createClass({
     }
   }
 });
+
+window.ImageModal = ImageModal;

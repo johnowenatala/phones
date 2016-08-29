@@ -19,5 +19,8 @@
 .idea
 
 # npm local modules
-node_modules
+/node_modules
 vendor/assets/bower_components
+
+/app/assets/*/compiled/
+/public/assets/*

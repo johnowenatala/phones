@@ -14,7 +14,7 @@ class Root extends React.Component {
   render(){
     return (
         <Provider store={store}>
-          <div>This is a app X <Spam /> </div>
+          <div>This is a app X.1 <Spam /> </div>
         </Provider>
     );
   }

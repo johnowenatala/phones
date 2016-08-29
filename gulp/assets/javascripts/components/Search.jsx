@@ -28,3 +28,4 @@ const Search = (props) => (
     </form>
 );
 
+window.Search = Search;

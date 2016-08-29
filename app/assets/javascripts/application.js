@@ -16,7 +16,7 @@
 //= require chosen
 //= require react
 //= require react_ujs
-//= require components
-//= require redux-components
-//= require_tree .
+//
+// compiled from gulp
+//= require global
 
