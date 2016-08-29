@@ -2,6 +2,8 @@ var React = require('react');
 var Provider = require('react-redux').Provider;
 var configureStore = require('./store/configureStore.js');
 
+var Spam = require('./Spam.jsx');
+
 var store = configureStore();
 
 class Root extends React.Component {
@@ -12,7 +14,7 @@ class Root extends React.Component {
   render(){
     return (
         <Provider store={store}>
-          <div>This is a app 10</div>
+          <div>This is a app X <Spam /> </div>
         </Provider>
     );
   }
