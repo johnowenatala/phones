@@ -1,43 +1,40 @@
-var React = require('react');
-var Provider = require('react-redux').Provider;
-var configureStore = require('./store/configureStore.js');
+import { Component, PropTypes } from 'react'
+import { Provider } from 'react-redux'
+import configureStore from './store/configureStore.es6'
 
-var Spam = require('./Spam.jsx');
-
-var store = configureStore();
-
-class Root extends React.Component {
-  componentWillMount(){
-
-  }
-
-  render(){
-    return (
-        <Provider store={store}>
-          <div>This is a app X.1 <Spam /> </div>
-        </Provider>
-    );
-  }
-
+const propTypes = {
+  initialData: PropTypes.shape({
+    phones: PropTypes.array.isRequired,
+    order: PropTypes.object,
+    filter: PropTypes.string
+  })
 }
 
-window.Root = Root;
+const defaultProps = {
+  initialData: {
+    phones: []
+  }
+}
+
+class Root extends Component {
+
+  constructor(props) {
+    super(props)
+    
+    this.store = configureStore(this.props.initialData)
+  }
+
+  render() {
+    return (
+      <Provider store={this.store}>
+        <div>This is a app X.3 </div>
+      </Provider>
+    );  
+  }  
+}
+
+Root.propTypes = propTypes;
+Root.defaultProps = defaultProps;
 
 
-//
-// window.Root = React.createClass({
-//
-//   componentWillMount: function () {
-//     //store.dispatch(undefined,null);
-//   },
-//
-//   render: function(){
-//     return (
-//         <Provider store={store}>
-//           <div>This is a app 7</div>
-//         </Provider>
-//     );
-//   }
-//
-// });
-//
+export default Root
